@@ -8,7 +8,7 @@ import (
 
 	// mysql driver
 	_ "github.com/go-sql-driver/mysql"
-	"../service/v1"
+	"github.com/jtcosta/travelExp/pkg/service/v1"
 )
 
 // Config is configuration for Server

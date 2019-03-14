@@ -5,7 +5,7 @@ import(
 	"net"
 	"fmt"
 	"google.golang.org/grpc"
-	hotel "../proto/v1/hotel"
+	hotel "github.com/jtcosta/travelExp/api/proto/v1/hotel"
 )
 
 type server struct{}
