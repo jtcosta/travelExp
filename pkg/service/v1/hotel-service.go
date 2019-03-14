@@ -7,7 +7,7 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	v1 "github.com/jtcosta/travelExp/api/v1"
+	v1 "github.com/jtcosta/travelExp/pkg/api/v1"
 )
 
 const (
@@ -61,8 +61,7 @@ func (s *HotelServiceServer) Create(ctx context.Context, req *v1.CreateRequest) 
 
 	// insert Hotel entity data
 	res, err := c.ExecContext(ctx, 
-	`INSERT INTO "hotel"("name", "city", "country", "phone", "description", "lat", "long") 
-	VALUES (?, ?, ?, ?, ?, ?, ?)`,
+	"INSERT INTO hotel ('name', 'city', 'country', 'phone', 'description', 'lat', 'long') VALUES (?, ?, ?, ?, ?, ?, ?)",
 	req.Hotel.Name, req.Hotel.City, req.Hotel.Country, req.Hotel.Phone, req.Hotel.Description, req.Hotel.Lat, req.Hotel.Long)
 	if err != nil {
 		return nil, status.Error(codes.Unknown, "failed to insert into Hotel-> "+err.Error())

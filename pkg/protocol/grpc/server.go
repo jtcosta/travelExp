@@ -1,4 +1,4 @@
-package grpc
+package grpc;
 
 import (
 	"context"
@@ -8,8 +8,7 @@ import (
 	"os/signal"
 
 	"google.golang.org/grpc"
-
-	"github.com/jtcosta/travelExp/pkg/api/v1"
+	v1 "github.com/jtcosta/travelExp/pkg/api/v1" 
 )
 
 // RunServer runs gRPC service to publish ToDo service
@@ -21,7 +20,7 @@ func RunServer(ctx context.Context, v1API v1.HotelServiceServer, port string) er
 
 	// register service
 	server := grpc.NewServer()
-	v1.RegisteHotelServiceServer(server, v1API)
+	v1.RegisterHotelServiceServer(server, v1API);
 
 	// graceful shutdown
 	c := make(chan os.Signal, 1)
