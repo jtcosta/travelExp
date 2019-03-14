@@ -40,7 +40,7 @@ func main() {
 	req1 := v1.CreateRequest{
 		Api: apiVersion,
 		Hotel: &v1.Hotel{
-			Name:       "teste",
+			Name: "teste",
 			City: "porto",
 			Country: "portugal",
 			Phone: "+351935566326",
