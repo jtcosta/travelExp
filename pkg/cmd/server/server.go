@@ -61,7 +61,7 @@ func RunServer() error {
 	}
 	defer db.Close()
 
-	v1API := v1.NewToDoServiceServer(db)
+	v1API := v1.NewHotelServiceServer(db)
 
 	return grpc.RunServer(ctx, v1API, cfg.GRPCPort)
 }

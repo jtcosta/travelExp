@@ -7,7 +7,7 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	v1 "../../api/v1"
+	v1 "github.com/jtcosta/travelExp/api/v1"
 )
 
 const (
