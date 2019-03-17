@@ -8,6 +8,13 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
+    <div class="collection">
+        <a href="#!" class="collection-item"><span class="badge">1</span>Alan</a>
+        <a href="#!" class="collection-item"><span class="new badge">4</span>Alan</a>
+        <a href="#!" class="collection-item">Alan</a>
+        <a href="#!" class="collection-item"><span class="badge">14</span>Alan</a>
+    </div>
+
 <div class="example-wrapper">
     <h1>Hello {{ controller_name }}! ✅</h1>
 
@@ -15,6 +22,8 @@
     <ul>
         <li>Your controller at <code><a href="{{ '/Users/joaocosta/go/src/github.com/travelExp/frontend/src/Controller/HomepageController.php'|file_link(0) }}">src/Controller/HomepageController.php</a></code></li>
         <li>Your template at <code><a href="{{ '/Users/joaocosta/go/src/github.com/travelExp/frontend/templates/homepage/index.html.twig'|file_link(0) }}">templates/homepage/index.html.twig</a></code></li>
+        {{ dump(hotel)}}
+        {{ dump(response)}}
     </ul>
 </div>
 {% endblock %}

@@ -2,7 +2,8 @@ syntax = "proto3";
 
 package v1;
 
-import "google/protobuf/timestamp.proto";
+//import "google/protobuf/timestamp.proto";
+//import "google/api/annotations.proto";
 
 
 option go_package="hotel";
@@ -16,8 +17,8 @@ message Hotel {
     string description = 6;
     sint32 lat = 7;
     sint32 long = 8;
-    google.protobuf.Timestamp createdAt = 9;
-    google.protobuf.Timestamp updatedAt = 10;
+   // google.protobuf.Timestamp createdAt = 9;
+   // google.protobuf.Timestamp updatedAt = 10;
 }
 
 message CreateRequest{
@@ -31,5 +32,10 @@ message CreateResponse{
 }
 
 service HotelService{
-    rpc Create(CreateRequest) returns (CreateResponse);
+    rpc Create(CreateRequest) returns (CreateResponse){
+       // option (google.api.http) = {
+         //   post: "/v1/hotel/create"
+           // body: "*"
+        //};
+    };
 };
