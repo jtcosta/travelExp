@@ -4,6 +4,7 @@ namespace App\Controller;
 
 
 use App\Entity\HotelEntity;
+use App\Service\HotelClient;
 use Grpc\UnaryCall;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -14,9 +15,9 @@ use V1\Hotel;
 class HomepageController extends AbstractController
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/admin", name="homepage")
      */
-    public function index()
+    public function index(HotelClient $hotelClient)
     {
 
         $v = new Hotel();
@@ -24,21 +25,23 @@ class HomepageController extends AbstractController
         $v->setLat(40.102);
         $v->setLong(20.12);
 
-
-        $v->serializeToString();
-
         $createHotelRequest = new CreateRequest();
         $createHotelRequest->setHotel($v);
 
-        $hotelEntity = new HotelEntity();
-        list($response, $status) = $hotelEntity->createHotel($createHotelRequest)->wait();
-
-
+       // list($response, $status) = $hotelClient->createHotel($createHotelRequest)->wait();
 
         return $this->render('homepage/index.html.twig', [
             'controller_name' => 'HomepageController',
             'hotel' => $v->serializeToJsonString(),
-            'response' => $response->getId()
+            //'response' => $response->getId()
         ]);
+    }
+
+    /**
+     * @Route("/createHotel", name="create-hotel")
+     */
+    public function createHotel()
+    {
+
     }
 }

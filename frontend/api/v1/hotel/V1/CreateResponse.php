@@ -7,28 +7,40 @@ namespace V1;
 use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\GPBWrapperUtils;
 
 /**
- * Protobuf type <code>v1.CreateResponse</code>
+ * Generated from protobuf message <code>v1.CreateResponse</code>
  */
 class CreateResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>string api = 1;</code>
+     * Generated from protobuf field <code>string api = 1;</code>
      */
     private $api = '';
     /**
-     * <code>int64 id = 2;</code>
+     * Generated from protobuf field <code>int64 id = 2;</code>
      */
     private $id = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $api
+     *     @type int|string $id
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\HotelService::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
-     * <code>string api = 1;</code>
+     * Generated from protobuf field <code>string api = 1;</code>
+     * @return string
      */
     public function getApi()
     {
@@ -36,16 +48,21 @@ class CreateResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string api = 1;</code>
+     * Generated from protobuf field <code>string api = 1;</code>
+     * @param string $var
+     * @return $this
      */
     public function setApi($var)
     {
         GPBUtil::checkString($var, True);
         $this->api = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 id = 2;</code>
+     * Generated from protobuf field <code>int64 id = 2;</code>
+     * @return int|string
      */
     public function getId()
     {
@@ -53,12 +70,16 @@ class CreateResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 id = 2;</code>
+     * Generated from protobuf field <code>int64 id = 2;</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setId($var)
     {
         GPBUtil::checkInt64($var);
         $this->id = $var;
+
+        return $this;
     }
 
 }

@@ -7,57 +7,80 @@ namespace V1;
 use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\GPBWrapperUtils;
 
 /**
- * Protobuf type <code>v1.Hotel</code>
+ * Generated from protobuf message <code>v1.Hotel</code>
  */
 class Hotel extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>int64 id = 1;</code>
+     * Generated from protobuf field <code>int64 id = 1;</code>
      */
     private $id = 0;
     /**
-     * <code>string name = 2;</code>
+     * Generated from protobuf field <code>string name = 2;</code>
      */
     private $name = '';
     /**
-     * <code>string city = 3;</code>
+     * Generated from protobuf field <code>string city = 3;</code>
      */
     private $city = '';
     /**
-     * <code>string country = 4;</code>
+     * Generated from protobuf field <code>string country = 4;</code>
      */
     private $country = '';
     /**
-     * <code>string phone = 5;</code>
+     * Generated from protobuf field <code>string phone = 5;</code>
      */
     private $phone = '';
     /**
-     * <code>string description = 6;</code>
+     * Generated from protobuf field <code>string description = 6;</code>
      */
     private $description = '';
     /**
-     * <code>sint32 lat = 7;</code>
+     * Generated from protobuf field <code>sint32 lat = 7;</code>
      */
     private $lat = 0;
     /**
-     * <pre>
-     * google.protobuf.Timestamp createdAt = 9;
-     * google.protobuf.Timestamp updatedAt = 10;
-     * </pre>
-     *
-     * <code>sint32 long = 8;</code>
+     * Generated from protobuf field <code>sint32 long = 8;</code>
      */
     private $long = 0;
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp createdAt = 9;</code>
+     */
+    private $createdAt = null;
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp updatedAt = 10;</code>
+     */
+    private $updatedAt = null;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type int|string $id
+     *     @type string $name
+     *     @type string $city
+     *     @type string $country
+     *     @type string $phone
+     *     @type string $description
+     *     @type int $lat
+     *     @type int $long
+     *     @type \Google\Protobuf\Timestamp $createdAt
+     *     @type \Google\Protobuf\Timestamp $updatedAt
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\HotelService::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
-     * <code>int64 id = 1;</code>
+     * Generated from protobuf field <code>int64 id = 1;</code>
+     * @return int|string
      */
     public function getId()
     {
@@ -65,16 +88,21 @@ class Hotel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 id = 1;</code>
+     * Generated from protobuf field <code>int64 id = 1;</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setId($var)
     {
         GPBUtil::checkInt64($var);
         $this->id = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string name = 2;</code>
+     * Generated from protobuf field <code>string name = 2;</code>
+     * @return string
      */
     public function getName()
     {
@@ -82,16 +110,21 @@ class Hotel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string name = 2;</code>
+     * Generated from protobuf field <code>string name = 2;</code>
+     * @param string $var
+     * @return $this
      */
     public function setName($var)
     {
         GPBUtil::checkString($var, True);
         $this->name = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string city = 3;</code>
+     * Generated from protobuf field <code>string city = 3;</code>
+     * @return string
      */
     public function getCity()
     {
@@ -99,16 +132,21 @@ class Hotel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string city = 3;</code>
+     * Generated from protobuf field <code>string city = 3;</code>
+     * @param string $var
+     * @return $this
      */
     public function setCity($var)
     {
         GPBUtil::checkString($var, True);
         $this->city = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string country = 4;</code>
+     * Generated from protobuf field <code>string country = 4;</code>
+     * @return string
      */
     public function getCountry()
     {
@@ -116,16 +154,21 @@ class Hotel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string country = 4;</code>
+     * Generated from protobuf field <code>string country = 4;</code>
+     * @param string $var
+     * @return $this
      */
     public function setCountry($var)
     {
         GPBUtil::checkString($var, True);
         $this->country = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string phone = 5;</code>
+     * Generated from protobuf field <code>string phone = 5;</code>
+     * @return string
      */
     public function getPhone()
     {
@@ -133,16 +176,21 @@ class Hotel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string phone = 5;</code>
+     * Generated from protobuf field <code>string phone = 5;</code>
+     * @param string $var
+     * @return $this
      */
     public function setPhone($var)
     {
         GPBUtil::checkString($var, True);
         $this->phone = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string description = 6;</code>
+     * Generated from protobuf field <code>string description = 6;</code>
+     * @return string
      */
     public function getDescription()
     {
@@ -150,16 +198,21 @@ class Hotel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string description = 6;</code>
+     * Generated from protobuf field <code>string description = 6;</code>
+     * @param string $var
+     * @return $this
      */
     public function setDescription($var)
     {
         GPBUtil::checkString($var, True);
         $this->description = $var;
+
+        return $this;
     }
 
     /**
-     * <code>sint32 lat = 7;</code>
+     * Generated from protobuf field <code>sint32 lat = 7;</code>
+     * @return int
      */
     public function getLat()
     {
@@ -167,21 +220,21 @@ class Hotel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>sint32 lat = 7;</code>
+     * Generated from protobuf field <code>sint32 lat = 7;</code>
+     * @param int $var
+     * @return $this
      */
     public function setLat($var)
     {
         GPBUtil::checkInt32($var);
         $this->lat = $var;
+
+        return $this;
     }
 
     /**
-     * <pre>
-     * google.protobuf.Timestamp createdAt = 9;
-     * google.protobuf.Timestamp updatedAt = 10;
-     * </pre>
-     *
-     * <code>sint32 long = 8;</code>
+     * Generated from protobuf field <code>sint32 long = 8;</code>
+     * @return int
      */
     public function getLong()
     {
@@ -189,17 +242,60 @@ class Hotel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
-     * google.protobuf.Timestamp createdAt = 9;
-     * google.protobuf.Timestamp updatedAt = 10;
-     * </pre>
-     *
-     * <code>sint32 long = 8;</code>
+     * Generated from protobuf field <code>sint32 long = 8;</code>
+     * @param int $var
+     * @return $this
      */
     public function setLong($var)
     {
         GPBUtil::checkInt32($var);
         $this->long = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp createdAt = 9;</code>
+     * @return \Google\Protobuf\Timestamp
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp createdAt = 9;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setCreatedAt($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->createdAt = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp updatedAt = 10;</code>
+     * @return \Google\Protobuf\Timestamp
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp updatedAt = 10;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setUpdatedAt($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->updatedAt = $var;
+
+        return $this;
     }
 
 }

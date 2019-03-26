@@ -8,22 +8,92 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-    <div class="collection">
-        <a href="#!" class="collection-item"><span class="badge">1</span>Alan</a>
-        <a href="#!" class="collection-item"><span class="new badge">4</span>Alan</a>
-        <a href="#!" class="collection-item">Alan</a>
-        <a href="#!" class="collection-item"><span class="badge">14</span>Alan</a>
-    </div>
+
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <div class = "row">
+        <form class = "col s12">
+            <div class = "row">
+                <div class = "input-field col s6">
+                    <i class = "material-icons prefix">account_circle</i>
+                    <input placeholder = "Username" value = "" id = "name"
+                           type = "text" class = "active validate" required />
+                    <label for = "name">Username</label>
+                </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/joaocosta/go/src/github.com/travelExp/frontend/src/Controller/HomepageController.php'|file_link(0) }}">src/Controller/HomepageController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/joaocosta/go/src/github.com/travelExp/frontend/templates/homepage/index.html.twig'|file_link(0) }}">templates/homepage/index.html.twig</a></code></li>
-        {{ dump(hotel)}}
-        {{ dump(response)}}
-    </ul>
+                <div class = "input-field col s6">
+                    <label for = "password">Password</label>
+                    <input id = "password" type = "password" placeholder = "Password"
+                           class = "validate" required />
+                </div>
+            </div>
+
+            <div class = "row">
+                <div class = "input-field col s12">
+                    <input placeholder = "Email" id = "email" type = "email"
+                           class = "validate">
+                    <label for = "email">Email</label>
+                </div>
+            </div>
+
+            <div class = "row">
+                <div class = "input-field col s12">
+                    <i class = "material-icons prefix">mode_edit</i>
+                    <textarea id = "address" class = "materialize-textarea"></textarea>
+                    <label for = "address">Address</label>
+                </div>
+            </div>
+
+            <div class = "row">
+                <div class = "input-field col s12">
+                    <input placeholder = "Description" id = "comments"
+                           type = "text"  />
+                    <label for = "comments">Description</label>
+                </div>
+            </div>
+
+            <div class = "row">
+                <div class = "input-field col s12">
+                    <p>
+                        <input id = "married" type = "checkbox" checked = "checked" />
+                        <label for = "married">Married</label>
+                    </p>
+
+                    <p>
+                        <input id = "single" type = "checkbox" class = "filled-in" />
+                        <label for = "single">Single</label>
+                    </p>
+
+                    <p>
+                        <input id = "dontknow" type = "checkbox" disabled = "disabled" />
+                        <label for = "dontknow">Don't know (Disabled)</label>
+                    </p>
+                </div>
+            </div>
+
+            <div class = "row">
+                <div class = "input-field col s12">
+                    <p>
+                        <input id = "male" type = "radio" name = "gender"
+                               value = "male" checked />
+                        <label for = "male">Male</label>
+                    </p>
+
+                    <p>
+                        <input id = "female" type = "radio" name = "gender"
+                               value = "female" checked />
+                        <label for = "female">Female</label>
+                    </p>
+
+                    <p>
+                        <input id = "dontknow1" type = "radio" name = "gender"
+                               value = "female" disabled />
+                        <label for = "dontknow1">Don't know (Disabled)</label>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+
 </div>
 {% endblock %}

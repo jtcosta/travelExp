@@ -1,0 +1,17 @@
+easy_admin:
+    site_name: 'TravelExp'
+    design:
+        menu:
+            - { label: 'Home', url: '/', rel: 'index', icon: 'home'}
+            - { entity: 'Hotel', label: 'Hotels',  icon: 'hotel' }
+    entities:
+        Hotel:
+            class: App\Entity\Hotel
+            form:
+                fields:
+                    - { type: 'group', columns: 4, label: 'Basic information' }
+                    - name
+                    - { property: 'description', type: 'fos_ckeditor' }
+                    - { type: 'group', columns: 4, label: 'Locale' }
+                    - lat
+                    - lon

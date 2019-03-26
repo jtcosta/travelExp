@@ -7,28 +7,40 @@ namespace V1;
 use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\GPBWrapperUtils;
 
 /**
- * Protobuf type <code>v1.CreateRequest</code>
+ * Generated from protobuf message <code>v1.CreateRequest</code>
  */
 class CreateRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>string api = 1;</code>
+     * Generated from protobuf field <code>string api = 1;</code>
      */
     private $api = '';
     /**
-     * <code>.v1.Hotel hotel = 2;</code>
+     * Generated from protobuf field <code>.v1.Hotel hotel = 2;</code>
      */
     private $hotel = null;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $api
+     *     @type \V1\Hotel $hotel
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\HotelService::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
-     * <code>string api = 1;</code>
+     * Generated from protobuf field <code>string api = 1;</code>
+     * @return string
      */
     public function getApi()
     {
@@ -36,16 +48,21 @@ class CreateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string api = 1;</code>
+     * Generated from protobuf field <code>string api = 1;</code>
+     * @param string $var
+     * @return $this
      */
     public function setApi($var)
     {
         GPBUtil::checkString($var, True);
         $this->api = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.v1.Hotel hotel = 2;</code>
+     * Generated from protobuf field <code>.v1.Hotel hotel = 2;</code>
+     * @return \V1\Hotel
      */
     public function getHotel()
     {
@@ -53,12 +70,16 @@ class CreateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.v1.Hotel hotel = 2;</code>
+     * Generated from protobuf field <code>.v1.Hotel hotel = 2;</code>
+     * @param \V1\Hotel $var
+     * @return $this
      */
-    public function setHotel(&$var)
+    public function setHotel($var)
     {
         GPBUtil::checkMessage($var, \V1\Hotel::class);
         $this->hotel = $var;
+
+        return $this;
     }
 
 }
